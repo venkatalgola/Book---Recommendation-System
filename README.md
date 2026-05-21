@@ -2,7 +2,10 @@
 Built a book recommendation system that suggests books to users based on popularity, reading behavior, and book content similarity — using a dataset of 271,360 books, 1.1M+ ratings, and 278,858 users.
 📦 Dataset
 Source: Book Recommendation Dataset – Kaggle
-FileRecordsKey ColumnsBooks.csv271,360ISBN, Title, Author, PublisherRatings.csv1,149,780User-ID, ISBN, Book-RatingUsers.csv278,858User-ID, Location, Age
+File            Records              KeyColumns 
+Books.csv       271,360              ISBN, Title, Author, Publisher
+Ratings.csv     1,149,780            User-ID, ISBN, Book-Rating
+Users.csv       278,858              User-ID, Location, Age
 
 🛠️ Tools & Libraries
 
@@ -43,7 +46,11 @@ Output: 5 most content-similar books for any given title
 
 
 📊 Results
-MethodSample InputTop RecommendationPopularity—Harry Potter series, Da Vinci CodeItem-Based"Me Talk Pretty One Day"The Poisonwood Bible (Rating: 8.2)User-BasedUser #31556Artemis Fowl, Eragon, Guardians of Ga'HooleContent-Based"The Da Vinci Code"The Firm, The Chamber (John Grisham)
+  Method                 SampleInput                        Top Recommendation
+Popularity              —                          Harry Potter series, Da Vinci Code
+Item-Based         "Me Talk Pretty One Day"        The Poisonwood Bible (Rating: 8.2)
+User-BasedUser     #31556                          Artemis Fowl, Eragon, Guardians of Ga'Hoole
+Content-Based      "The Da Vinci Code"             The Firm, The Chamber (John Grisham)
 
 💡 Key Learnings
 
@@ -52,7 +59,7 @@ Cold start problem: New books with few ratings get fallback random recommendatio
 Weighted ratings vs simple averages: A book with 10,000 ratings at 7.5 is more reliable than one with 5 ratings at 10.0
 Cosine similarity vs Pearson correlation: Pearson works better for collaborative filtering (handles scale differences in user ratings)
 
-🚀 How to Run
+# How to Run
 bash# Clone the repository
 git clone https://github.com/yourusername/book-recommender
 
@@ -61,16 +68,11 @@ git clone https://github.com/yourusername/book-recommender
 
 # Run all cells in book-recommender.ipynb
 
-📁 Repository Structure
-book-recommender/
-│
-├── README.md
-├── book-recommender.ipynb     ← Main notebook
-├── report.pdf                 ← Full project report
-└── requirements.txt
 
 🔮 Future Improvements
 
 Integrate a vector database (FAISS/ChromaDB) for faster similarity search at scale
 Add a RAG layer to answer natural language queries like "recommend a thriller like Gone Girl"
-Deploy as a simple web app using Streamlit
+Deploy as a simple web app using Streamlit.
+
+Please refer the pdf guide for more clarity
